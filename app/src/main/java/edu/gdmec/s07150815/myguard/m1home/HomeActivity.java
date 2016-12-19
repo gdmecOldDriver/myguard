@@ -1,9 +1,11 @@
-package edu.gdmec.s07150815.myguard;
+package edu.gdmec.s07150815.myguard.m1home;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import edu.gdmec.s07150815.myguard.R;
+
+public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
