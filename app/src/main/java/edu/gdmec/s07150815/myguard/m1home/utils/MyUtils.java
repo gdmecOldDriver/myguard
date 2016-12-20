@@ -21,7 +21,7 @@ public class MyUtils {
         PackageManager manager = context.getPackageManager();
         try {
             //获取到一个应用程序的信息
-            //getPackageName() 获取到当前程序的包名11
+            //getPackageName() 获取到当前程序的包名
             PackageInfo packageInfo = manager.getPackageInfo(context.getPackageName(),0);
             return packageInfo.versionName;
         } catch (PackageManager.NameNotFoundException e) {

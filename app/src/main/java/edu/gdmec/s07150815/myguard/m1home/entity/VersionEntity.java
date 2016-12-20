@@ -6,7 +6,7 @@ import android.os.Bundle;
 import edu.gdmec.s07150815.myguard.R;
 
 public class VersionEntity  {
-    //服务器版本号  11
+    //服务器版本号
     public  String versioncode;
     //版本描述
     public String description;
