@@ -42,4 +42,5 @@ public class AppEntity {
     public void setMemorySize(double memorySize) {
         this.memorySize = memorySize;
     }
+    //1
 }

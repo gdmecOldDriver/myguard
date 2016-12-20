@@ -74,7 +74,7 @@ public class ProcessManagerAdapter extends BaseAdapter {
                 return tv;
             }
         }
-        //获取TaskInfo对象
+        //获取TaskInfo对象1
         TaskInfo taskInfo = null;
         if(position<=mSystaskInfos.size()){
             taskInfo = mUsertaskInfo.get(position-1);

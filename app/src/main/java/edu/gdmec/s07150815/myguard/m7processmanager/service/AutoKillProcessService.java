@@ -7,7 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.IBinder;
-
+//1
 public class AutoKillProcessService extends Service {
     private ScreenLockReceiver receiver;
     public AutoKillProcessService() {

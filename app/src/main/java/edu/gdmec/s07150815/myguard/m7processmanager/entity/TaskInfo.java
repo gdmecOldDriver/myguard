@@ -8,7 +8,7 @@ import android.graphics.drawable.Drawable;
 public class TaskInfo {
     public String appName;
     public long appMemory;
-    //用来标记app是否被选中
+    //用来标记app是否被选中1
     public boolean isChecked;
     public Drawable appIcon;
     public boolean isUserApp;

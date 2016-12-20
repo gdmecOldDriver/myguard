@@ -44,7 +44,7 @@ public class ProcessManagerActivity extends AppCompatActivity implements View.On
         super.onResume();
     }
     private void initView(){
-        //findViewById(R.id)
+        //findViewById(R.id)1
     }
     @Override
     public void onClick(View v) {
