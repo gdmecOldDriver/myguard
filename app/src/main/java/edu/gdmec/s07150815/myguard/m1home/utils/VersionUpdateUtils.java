@@ -153,7 +153,7 @@ public class VersionUpdateUtils  {
             public void onSuccess(ResponseInfo<File> arg0) {
                 //成功就关闭
                 mProgressDialog.dismiss();
-                //调用这个方法，感觉这两句位置应该调换
+                //调用这个方法，感觉这两句位置应该调换11
                 MyUtils.installApk(context);
             }
 

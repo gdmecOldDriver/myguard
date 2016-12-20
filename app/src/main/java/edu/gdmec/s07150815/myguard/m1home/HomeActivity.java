@@ -195,7 +195,7 @@ public class HomeActivity extends AppCompatActivity {
         //即每次调用该方法都打开一次homeactivity
         startActivity(intent);
     }
-    //按两次返回键退出程序
+    //按两次返回键退出程序11
     @Override
     public boolean onKeyDown(int keycode, KeyEvent event){
         if(keycode== KeyEvent.KEYCODE_BACK){

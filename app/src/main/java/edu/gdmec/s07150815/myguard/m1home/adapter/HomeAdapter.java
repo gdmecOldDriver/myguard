@@ -38,7 +38,7 @@ public class HomeAdapter extends BaseAdapter {
         tv_name.setText(names[position]);
         return view;
     }
-//最后两个方法不需设置
+//最后两个方法不需设置 11
     @Override
     public long getItemId(int position) {
         return 0;
