@@ -17,7 +17,7 @@ public class DownloadUtils {
     public void downapk(String url,String targetFile,final MyCallBack myCallBack){
         //创建HttpUtils对象
         HttpUtils httpUtils = new HttpUtils();
-        //调用HttpUtils下载的方法下载指定文件11
+        //调用HttpUtils下载的方法下载指定文件
         httpUtils.download(url, targetFile, new RequestCallBack<File>() {
             @Override
             public void onSuccess(ResponseInfo<File> arg0) {
@@ -38,7 +38,7 @@ public class DownloadUtils {
         });
     }
 }
-//借口，用于监听下载动态的接口11
+//借口，用于监听下载动态的接口
 interface MyCallBack{
     //下载成功是调用
     void onSuccess(ResponseInfo<File> arg0);

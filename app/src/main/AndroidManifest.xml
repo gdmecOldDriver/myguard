@@ -19,9 +19,7 @@
         <activity android:name=".m1home.entity.VersionEntity" />
         <activity android:name=".m1home.utils.DownloadUtils" />
         <activity android:name=".m1home.utils.MyUtils" />
-        <activity android:name=".m1home.utils.VersionUpdateUtils" />
-        <activity android:name=".m7processmanager.ProcessManagerActivity" />
-        <activity android:name=".m7processmanager.ProcessManagerSettingActivity"></activity>
+        <activity android:name=".m1home.utils.VersionUpdateUtils"></activity>
     </application>
 
 </manifest>

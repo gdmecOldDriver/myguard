@@ -62,9 +62,9 @@ public class HomeActivity extends AppCompatActivity {
 //                    case 2://软件管家
 //                        startActivity(AppManagerActivity.class);
 //                        break;
-//                    case 3://手机杀毒
-//                        startActivity(VirusScanActivity.class);
-//                        break;
+                      case 3://手机杀毒
+                         startActivity(VirusScanActivity.class);
+                         break;
 //                    case 4://缓存清理
 //                        startActivity(CacheClearListActivity.class);
 //                        break;
@@ -195,7 +195,7 @@ public class HomeActivity extends AppCompatActivity {
         //即每次调用该方法都打开一次homeactivity
         startActivity(intent);
     }
-    //按两次返回键退出程序11
+    //按两次返回键退出程序
     @Override
     public boolean onKeyDown(int keycode, KeyEvent event){
         if(keycode== KeyEvent.KEYCODE_BACK){

@@ -10,7 +10,7 @@
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:id="@+id/imav_appicon"/>
+            android:id="@+id/imgv_appicon"/>
         <TextView
             android:id="@+id/tv_appsize"
             style="@style/textview16sp"
