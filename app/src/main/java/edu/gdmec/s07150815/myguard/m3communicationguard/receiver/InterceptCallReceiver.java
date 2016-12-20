@@ -35,7 +35,7 @@ public class InterceptCallReceiver extends BroadcastReceiver {
                         return;
                     }
                     int blackContactMode=dao.getBlackContactMode(mIncomingNumber);
-                   /* if (blackContactMode==1||blackContactMode==3){
+                   /*  if (blackContactMode==1||blackContactMode==3){
                         //观察（另外一个应用程序的数据库变化）呼叫记录的变化，如果呼叫记录生成了，就把呼叫记录删除
                         Uri uri=Uri.parse("content://call_log/callls");
                         context.getContentResolver().registerContentObserver(
