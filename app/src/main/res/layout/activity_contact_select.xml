@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <include layout="@layout/titlebar"/>
-    <!--这是m1的-->
+    <!--这是m1的de -->
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

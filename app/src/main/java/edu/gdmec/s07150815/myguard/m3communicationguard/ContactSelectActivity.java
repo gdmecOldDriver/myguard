@@ -20,7 +20,7 @@ import edu.gdmec.s07150815.myguard.m3communicationguard.utils.ContactInfoParser;
 
 /**
  *
- * Created by 马达 on 2016/12/20.
+ * Created by 马达  on 2016/12/20.
  */
 public class ContactSelectActivity extends AppCompatActivity implements View.OnClickListener{
    private ListView mListView;
