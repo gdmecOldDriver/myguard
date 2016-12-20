@@ -19,7 +19,16 @@
         <activity android:name=".m1home.entity.VersionEntity" />
         <activity android:name=".m1home.utils.DownloadUtils" />
         <activity android:name=".m1home.utils.MyUtils" />
-        <activity android:name=".m1home.utils.VersionUpdateUtils"></activity>
+        <activity android:name=".m1home.utils.VersionUpdateUtils" />
+
+        <receiver
+            android:name=".m3communicationguard.receiver.InterceptCallReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".m3communicationguard.receiver.InterceptSmsReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
     </application>
 
 </manifest>
