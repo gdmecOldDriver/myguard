@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".m1home.adapter.HomeAdapter" />
-        <activity android:name=".m1home.entity.VisionEntity" />
+        <activity android:name=".m1home.entity.VersionEntity" />
         <activity android:name=".m1home.utils.DownloadUtils" />
         <activity android:name=".m1home.utils.MyUtils" />
         <activity android:name=".m1home.utils.VersionUpdateUtils"></activity>
