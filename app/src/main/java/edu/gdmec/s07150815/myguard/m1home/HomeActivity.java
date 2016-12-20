@@ -119,10 +119,10 @@ public class HomeActivity extends AppCompatActivity {
 //                        //显示输入密码对话框
 //                        showInterPswdDialog();
 //                    }else{
-//                        Toast.makeText(HomeActivity.this,"两次密码不一致！",0).show();
+//                     Toast.makeText(HomeActivity.this,"两次密码不一致！",Toast.LENGTH_SHORT).show();
 //                    }
 //                }else {
-//                    Toast.makeText(HomeActivity.this,"密码能为空！",0T).show();
+//                    Toast.makeText(HomeActivity.this,"密码能为空！",Toast.LENGTH_SHORT).show();
 //                }
 //            }
 //            @Override
@@ -143,7 +143,7 @@ public class HomeActivity extends AppCompatActivity {
 //           @Override
 //            public void confirm(){
 //               if(TextUtils.isEmpty(mInPswdDialog.getPassword())){
-//                   Toast.makeText(HomeActivity.this,"密码不能为空！",0).show();
+//                   Toast.makeText(HomeActivity.this,"密码不能为空！",Toast.LENGTH_SHORT).show();
 //               }else if(password.equals(MD5Utils.encode(mInPswdDialog.getPassword()))){
 //                   //进入防盗主界面
 //                   mInPswdDialog.dismiss();
@@ -151,7 +151,7 @@ public class HomeActivity extends AppCompatActivity {
 //               }else{
 //                   //对话框消失
 //                   mInPswdDialog.dismiss();
-//                   Toast.makeText(HomeActivity.this,"密码错误，请重新输入!",0).show();
+//                   Toast.makeText(HomeActivity.this,"密码错误，请重新输入!",Toast.LENGTH_SHORT).show();
 //               }
 //           }
 //            @Override
