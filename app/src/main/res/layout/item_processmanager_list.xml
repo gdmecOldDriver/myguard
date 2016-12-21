@@ -38,7 +38,7 @@
     <CheckBox
         android:id="@+id/checkBox"
         style="@style/wrapcontent"
-        android:button="@drawable/green_checkbos_selector"
+        android:button="@drawable/green_checkbox_selector"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:focusable="false"
