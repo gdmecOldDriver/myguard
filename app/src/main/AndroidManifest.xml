@@ -15,6 +15,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service android:name=".m8trafficMonitor.service.TrafficMonitoringService"
+            android:persistent="true"
+            android:enabled="true"
+            android:exported="true"/>
+
+        <receiver android:name=".m8trafficMonitor.receiver.BootCompleteReciever"
+            android:enabled="true"
+                android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+
+
     </application>
 
 </manifest>
