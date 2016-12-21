@@ -33,7 +33,7 @@ public class ProcessManagerActivity extends AppCompatActivity implements View.On
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_process_manager);
         initView();
-       // fillData();
+        fillData();
     }
 
     @Override
@@ -44,7 +44,7 @@ public class ProcessManagerActivity extends AppCompatActivity implements View.On
         super.onResume();
     }
     private void initView(){
-        //findViewById(R.id.rl);
+        findViewById(R.id.rl)
     }
     @Override
     public void onClick(View v) {
