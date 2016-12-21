@@ -1,8 +1,10 @@
 package edu.gdmec.s07150815.myguard;
 
+import android.annotation.TargetApi;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.telephony.SmsManager;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
@@ -18,6 +20,7 @@ public class App extends Application {
         super.onCreate();
         correctSIM();
     }
+    @TargetApi(Build.VERSION_CODES.DONUT)
     public void correctSIM(){
         //检查SIM卡是否发生变化
         SharedPreferences sp = getSharedPreferences("config", Context.MODE_PRIVATE);
