@@ -23,8 +23,7 @@
         <receiver
             android:name=".m3communicationguard.receiver.InterceptSmsReceiver"
             android:enabled="true"
-            android:exported="true" />
-
+            android:exported="true"></receiver>
     </application>
 
 </manifest>
