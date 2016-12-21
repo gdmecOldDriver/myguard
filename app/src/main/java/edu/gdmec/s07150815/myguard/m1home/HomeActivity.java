@@ -62,9 +62,9 @@ public class HomeActivity extends AppCompatActivity {
 //                    case 2://软件管家
 //                        startActivity(AppManagerActivity.class);
 //                        break;
-                      case 3://手机杀毒
+                     /* case 3://手机杀毒
                          startActivity(VirusScanActivity.class);
-                         break;
+                         break;*/
 //                    case 4://缓存清理
 //                        startActivity(CacheClearListActivity.class);
 //                        break;
