@@ -1,6 +1,5 @@
-package edu.gdmec.s07150815.myguard.m8TrafficMonitor.utils;
+package edu.gdmec.s07150815.myguard.m8trafficMonitor.utils;
 
-import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
 
