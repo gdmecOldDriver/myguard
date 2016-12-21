@@ -62,14 +62,14 @@ public class InterPasswordDialog extends Dialog implements View.OnClickListener{
     }
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.btn_comfirms:
-                myCallBack.comfirm();
-                break;
-            case R.id.btn_dismiss:
-                myCallBack.cancle();
-                break;
-        }
+    switch (v.getId()){
+        case R.id.btn_comfirms:
+            myCallBack.comfirm();
+            break;
+        case R.id.btn_dismiss:
+            myCallBack.cancle();
+            break;
+    }
     }
 
     public interface MyCallBack {

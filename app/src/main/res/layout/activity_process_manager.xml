@@ -62,7 +62,7 @@
              />
 
         <Button
-            android:id="@+id/btn_selectall"
+            android:id="@+id/selectall"
             android:layout_width="90dp"
             android:layout_height="40dp"
             android:layout_centerHorizontal="true"
