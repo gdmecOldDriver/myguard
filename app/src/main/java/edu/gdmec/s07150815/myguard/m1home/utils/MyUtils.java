@@ -11,7 +11,7 @@ import android.os.Bundle;
 
 import java.io.File;
 
-import edu.gdmec.s07150815.myguard.R;
+
 
 public class MyUtils {
 //获取版本号

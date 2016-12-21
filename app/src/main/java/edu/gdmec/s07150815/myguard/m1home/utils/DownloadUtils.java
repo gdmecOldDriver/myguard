@@ -10,7 +10,7 @@ import com.lidroid.xutils.http.callback.RequestCallBack;
 
 import java.io.File;
 
-import edu.gdmec.s07150815.myguard.R;
+
 
 public class DownloadUtils {
     //下载apk的方法
