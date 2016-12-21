@@ -27,7 +27,7 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.IOException;
 
-import edu.gdmec.s07150815.myguard.R;
+
 import edu.gdmec.s07150815.myguard.m1home.HomeActivity;
 import edu.gdmec.s07150815.myguard.m1home.entity.VersionEntity;
 

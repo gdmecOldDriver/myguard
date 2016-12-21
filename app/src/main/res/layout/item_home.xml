@@ -17,6 +17,7 @@
         android:layout_height="wrap_content"
         android:text="高级工具"
         android:layout_marginTop="3dp"
-        android:textColor="#8"
+        android:textColor="#80000000"
+        android:textSize="18sp"
          />
 </LinearLayout>
