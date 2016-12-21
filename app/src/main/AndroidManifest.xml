@@ -8,20 +8,22 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".m1home.HomeActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".m1home.adapter.HomeAdapter" />
-        <activity android:name=".m1home.entity.VersionEntity" />
-        <activity android:name=".m1home.utils.DownloadUtils" />
-        <activity android:name=".m1home.utils.MyUtils" />
-        <activity android:name=".m1home.utils.VersionUpdateUtils" />
-        <activity android:name=".m7processmanager.ProcessManagerActivity" />
-        <activity android:name=".m7processmanager.ProcessManagerSettingActivity"></activity>
+
+        <receiver
+            android:name=".m3communicationguard.receiver.InterceptCallReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".m3communicationguard.receiver.InterceptSmsReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
     </application>
 
 </manifest>

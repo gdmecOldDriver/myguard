@@ -44,7 +44,7 @@ public class BlackNumberDao {
     }
 
     //删除数据
-    public boolean detele(BlackContactInfo blackContactInfo){
+    public boolean delete(BlackContactInfo blackContactInfo){
         SQLiteDatabase db=blackNumberOpenHelper.getWritableDatabase();
         int rownumber=db.delete("blacknumber","number=?",new String[]{blackContactInfo.phoneNumber});
         if (rownumber==0){
