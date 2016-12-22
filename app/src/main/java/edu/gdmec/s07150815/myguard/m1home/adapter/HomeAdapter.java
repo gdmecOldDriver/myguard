@@ -14,8 +14,15 @@ import edu.gdmec.s07150815.myguard.R;
 //GridView显示界面用到的Adapter
 public class HomeAdapter extends BaseAdapter {
     int[]imageId = {
-        R.drawable.safe,R.drawable.callmsgsafe,R.drawable.app,R.drawable.trojan,R.drawable.sysoptimize,
-                R.drawable.taskmanager,R.drawable.netmanager,R.drawable.atools,R.drawable.settings
+            R.drawable.safe,
+            R.drawable.callmsgsafe,
+            R.drawable.app,
+            R.drawable.trojan,
+            R.drawable.sysoptimize,
+            R.drawable.taskmanager,
+            R.drawable.netmanager,
+            R.drawable.atools,
+            R.drawable.settings
     };
     String[] names = {"手机防盗","通讯卫士","软件管家","手机杀毒","缓存清理","进程管理","流量统计"
             ,"高级工具","设置中心"};
@@ -30,7 +37,7 @@ public class HomeAdapter extends BaseAdapter {
     }
     //设置每个条目的界面
     @Override
-    public Object getItem(int position) {
+    public View getView(int position, View convertView, ViewGroup parent) {
         View view = View.inflate(context,R.layout.item_home,null);
         ImageView iv_icon = (ImageView) view.findViewById(R.id.iv_icon);
         TextView tv_name = (TextView) view.findViewById(R.id.tv_name);
@@ -40,12 +47,13 @@ public class HomeAdapter extends BaseAdapter {
     }
 //最后两个方法不需设置
     @Override
+    public Object getItem(int position) {
+        return null;
+    }
+    @Override
     public long getItemId(int position) {
         return 0;
     }
 
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        return null;
-    }
+
 }
