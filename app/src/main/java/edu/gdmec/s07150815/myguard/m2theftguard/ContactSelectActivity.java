@@ -3,7 +3,6 @@ package edu.gdmec.s07150815.myguard.m2theftguard;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
@@ -29,7 +28,7 @@ public class ContactSelectActivity extends AppCompatActivity implements View.OnC
     private List<ContactInfo> systemContacts;
     Handler mHanler = new Handler() {
         @Override
-        public void handleMessage(Message msg) {
+        public void handleMessage(android.os.Message msg) {
             super.handleMessage(msg);
             switch (msg.what){
                 case 10:
@@ -53,6 +52,7 @@ public class ContactSelectActivity extends AppCompatActivity implements View.OnC
     private void initView() {
         ((TextView)findViewById(R.id.tv_title)).setText("选择联系人");
         ImageView mLeftImgv = (ImageView) findViewById(R.id.imgv_leftbtn);
+        mLeftImgv.setOnClickListener(this);
         mLeftImgv.setImageResource(R.drawable.back);
         //设置导航栏颜色
         findViewById(R.id.rl_titlebar).setBackgroundColor(getResources().getColor(R.color.purple));

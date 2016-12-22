@@ -22,7 +22,7 @@ public class ContactInfoParser {
         Uri uri = Uri.parse("content://com.android.contacts/raw_contacts");
         Uri darauri = Uri.parse("content://com.android.contacts/data");
         List<ContactInfo> infos = new ArrayList<ContactInfo>();
-        Cursor cursor = resolver.query(uri,new String[]{"contacts_id"},null,null,null);
+        Cursor cursor = resolver.query(uri,null,null,null,null);
         while (cursor.moveToNext()){
             String id = cursor.getString(0);
             if (id!=null){
@@ -40,7 +40,7 @@ public class ContactInfoParser {
                         info.name=data1;
                     }else if ("vnd.android.cursor.item/phone_v2".equals(mimetype)){
                         System.out.print("电话="+data1);
-                        info.name=data1;
+                        info.phone=data1;
                     }
                 }
                 //如果姓名电话都为空，则跳过该条数据

@@ -40,13 +40,13 @@ public class SetUp3Activity extends BaseSetUpActivity implements View.OnClickLis
     @Override
     public void showNext() {
         //判断文本输入框中是否有电话号码
-        String safephone = mInputPhone.getText().toString().trim();
-        if (TextUtils.isEmpty(safephone)){
+        String safePhone = mInputPhone.getText().toString().trim();
+        if (TextUtils.isEmpty(safePhone)){
             Toast.makeText(this,"请输入安全号码", Toast.LENGTH_SHORT).show();
             return;
         }
         SharedPreferences.Editor edit = sp.edit();
-        edit.putString("safephone",safephone);
+        edit.putString("safephone",safePhone);
         edit.commit();
         startActivityAndFinishSelf(SetUp4Activity.class);
     }

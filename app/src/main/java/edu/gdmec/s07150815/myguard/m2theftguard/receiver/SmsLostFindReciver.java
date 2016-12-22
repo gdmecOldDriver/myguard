@@ -20,7 +20,7 @@ import edu.gdmec.s07150815.myguard.m2theftguard.service.GPSLocationService;
  * Created by D on 2016/12/20.
  */
 public class SmsLostFindReciver extends BroadcastReceiver{
-    private static final String TAG  = BootCompleteReciever.class.getSimpleName();
+    private static final String TAG  = SmsLostFindReciver.class.getSimpleName();
     private SharedPreferences sharedPreferences;
     private ComponentName componentName;
     private MediaPlayer player =null;
@@ -41,7 +41,7 @@ public class SmsLostFindReciver extends BroadcastReceiver{
                     sender = sender.substring(3,sender.length());
                 }
                 String body = smsMessage.getMessageBody();
-                String safephone = sharedPreferences.getString("safePhone",null);
+                String safephone = sharedPreferences.getString("safephone",null);
                 //如果该短信是安全号码发送
                 if (!TextUtils.isEmpty(safephone)&sender.equals(safephone)){
                     if ("#*locaion*#".equals(body)){

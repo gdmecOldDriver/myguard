@@ -101,6 +101,7 @@ public class HomeActivity extends AppCompatActivity {
             //没有管理员的权限，则获取管理员的权限
             //写到这里
             Intent intent = new Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN);
+            intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN,componentName);
             intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION
                     , "获取超级管理员权限，用于远程锁屏和清除数据");
             startActivity(intent);
@@ -132,7 +133,7 @@ public class HomeActivity extends AppCompatActivity {
                         Toast.makeText(HomeActivity.this,"两次密码不一致！",Toast.LENGTH_SHORT).show();
                     }
                 }else {
-                    Toast.makeText(HomeActivity.this,"密码能为空！",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(HomeActivity.this,"密码不能为空！",Toast.LENGTH_SHORT).show();
                 }
             }
             @Override
@@ -148,7 +149,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
     //弹出密码对话框
-    //本方法需要完成“手机防盗模块”之后才能启用
+    //本方法需要完成“手机防盗模块”之后才能   启用
     private void showInterPswdDialog(){
         final String password = getPassword();
         final InterPasswordDialog mInPswdDialog = new InterPasswordDialog(HomeActivity.this);
@@ -218,7 +219,7 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int keycode, KeyEvent event) {
         if (keycode == KeyEvent.KEYCODE_BACK) {
-            if (System.currentTimeMillis() - mExitTime > 2000) {
+            if ((System.currentTimeMillis() - mExitTime )> 2000) {
                 Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
                 mExitTime = System.currentTimeMillis();
             } else {

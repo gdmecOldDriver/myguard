@@ -52,10 +52,10 @@ public class SetUpPasswordDialog extends Dialog implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.btn_comfirms:
+            case R.id.btn_ok:
                 myCallBack.ok();
                 break;
-            case R.id.btn_dismiss:
+            case R.id.btn_cancle:
                 myCallBack.cancle();
                 break;
         }

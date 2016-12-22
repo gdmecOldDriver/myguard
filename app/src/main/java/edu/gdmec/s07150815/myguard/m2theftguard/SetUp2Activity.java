@@ -57,6 +57,7 @@ public class SetUp2Activity extends BaseSetUpActivity implements View.OnClickLis
             switch (v.getId()){
                 case R.id.btn_bind_sim:
                     bindSIM();
+                    break;
             }
     }
     /**

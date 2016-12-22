@@ -140,8 +140,25 @@ public class SecurityPhoneActivity extends AppCompatActivity implements View.OnC
             finish();
             break;
         case R.id.btn_addblacknumber:
-            startActivity(new Intent(this,AddBlackNumberActivity.class));
+            startActivityForResult(new Intent(this,AddBlackNumberActivity.class),0);
             break;
     }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (adapter==null){
+            adapter = new BlackContactAdapter(pageBlackNumber,SecurityPhoneActivity.this);
+            adapter.setCallBack(new BlackContactCallBack() {
+                @Override
+                public void DataSizeChange() {
+                    fillData();
+                }
+            });
+            mListView.setAdapter(adapter);
+        }else {
+            adapter.notifyDataSetChanged();
+        }
     }
 }

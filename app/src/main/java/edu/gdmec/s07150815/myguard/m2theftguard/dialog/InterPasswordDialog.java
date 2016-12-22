@@ -15,7 +15,7 @@ import edu.gdmec.s07150815.myguard.R;
 /**
  * Created by D on 2016/12/20.
  */
-public class InterPasswordDialog extends Dialog implements View.OnClickListener{
+public class InterPasswordDialog extends Dialog implements android.view.View.OnClickListener{
   //对话框标题
     private TextView mTitleTV;
     //输入密码文本框
