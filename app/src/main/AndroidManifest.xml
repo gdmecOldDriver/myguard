@@ -93,6 +93,15 @@
                 <action android:name="android.provider.Telephony.SMS_RECEIED"/>
             </intent-filter>
         </receiver>
+        <!--hjl -->
+        <activity android:name=".m7processmanager.ProcessManagerActivity"/>
+        <activity android:name=".m7processmanager.ProcessManagerSettingActivity"/>
+
+        <service android:name=".m7processmanager.service.AutoKillProcessService"
+            android:enabled="true"
+            android:exported="true"/>
+
+
 
     </application>
 

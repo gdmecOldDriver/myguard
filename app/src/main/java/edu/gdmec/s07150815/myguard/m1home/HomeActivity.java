@@ -22,6 +22,7 @@ import edu.gdmec.s07150815.myguard.m2theftguard.dialog.SetUpPasswordDialog;
 import edu.gdmec.s07150815.myguard.m2theftguard.receiver.MyDeviceAdminReciver;
 import edu.gdmec.s07150815.myguard.m2theftguard.utils.MD5Utils;
 import edu.gdmec.s07150815.myguard.m3communicationguard.SecurityPhoneActivity;
+import edu.gdmec.s07150815.myguard.m7processmanager.ProcessManagerActivity;
 /*import edu.gdmec.s07150815.myguard.m4appmanager.AppManagerActivity;
 import edu.gdmec.s07150815.myguard.m5virusscan.VirusScanActivity;
 import edu.gdmec.s07150815.myguard.m5virusscan.utils.MD5Utils;*/
@@ -64,8 +65,8 @@ public class HomeActivity extends AppCompatActivity {
                         break;
                     //后续代码需要其他模块完成后才能启用
                     case 1://点击通讯卫士SecuritPhoneActivity
-                        startActivity(SecurityPhoneActivity.class);
-                        break;
+                       // startActivity(SecurityPhoneActivity.class);
+                       // break;
                     case 2://软件管家
 //                        startActivity(AppManagerActivity.class);
 //                        break;
@@ -76,8 +77,8 @@ public class HomeActivity extends AppCompatActivity {
 //                        startActivity(CacheClearListActivity.class);
 //                        break;
                     case 5://进程管理
-//                        startActivity(ProcessManager.class);
-//                        break;
+                       startActivity(ProcessManagerActivity.class);
+                     break;
                     case 6://流量统计
 //                        startActivity(TrafficMonitorActivity.class);
 //                        break;

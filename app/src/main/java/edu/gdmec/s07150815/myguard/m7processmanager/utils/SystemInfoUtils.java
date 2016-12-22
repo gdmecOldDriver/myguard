@@ -65,4 +65,15 @@ public class SystemInfoUtils {
         int count = runningAppProcessInfos.size();
         return count;
     }
+//    //测试新增功能ys
+//    public void getRunningServiceInfo(Context context){
+//        ActivityManager mactivityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+//        //设置一个默认Service的数量大小
+//        int defaultNum = 50;
+//        //通过调用activitymanager的getRunningservices 方法获得系统正在运行的全部进程
+//        List<ActivityManager.RunningServiceInfo> runningServiceList = mactivityManager.getRunningServices(defaultNum);
+//        System.out.println("运行数量"+runningServiceList.size());
+//        //serviceInfo Model类 用来保存所有进程信息
+//      // List<ActivityManager.RunningServiceInfo> serviceInfoList =
+//    }
 }

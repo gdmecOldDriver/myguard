@@ -24,8 +24,10 @@ public class TaskInfoParser {
     //获取正在运行的所有的进程的信息
     //参数context 上下文
     //返回进程信息的集合
+
     public static List<TaskInfo> getRunningTaskInfos(Context context){
         ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        getRunningTaskInfos(context);
         PackageManager pm = context.getPackageManager();
         List<ActivityManager.RunningAppProcessInfo>processInfos = am.getRunningAppProcesses();
         List<TaskInfo>taskInfos = new ArrayList<TaskInfo>();
