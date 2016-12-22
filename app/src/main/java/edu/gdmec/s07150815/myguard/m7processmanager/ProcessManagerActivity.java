@@ -41,7 +41,7 @@ public class ProcessManagerActivity extends AppCompatActivity implements View.On
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_process_manager);
         initView();
-        // fillData();
+        fillData();
     }
     @Override
     protected void onResume() {
@@ -137,7 +137,7 @@ public class ProcessManagerActivity extends AppCompatActivity implements View.On
                     }
                 });
             }
-        }.start();//新写法 很6 m
+        }.start();
     }
     @Override
     public void onClick(View v) {

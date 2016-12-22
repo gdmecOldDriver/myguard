@@ -33,7 +33,6 @@ public class AutoKillProcessService extends Service {
         return null;
     }
     class ScreenLockReceiver extends BroadcastReceiver {
-
         @Override
         public void onReceive(Context context, Intent intent) {
             ActivityManager am = (ActivityManager) getSystemService(ACTIVITY_SERVICE);

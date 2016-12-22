@@ -45,7 +45,7 @@ public class ProcessManagerSettingActivity extends AppCompatActivity implements 
     //初始化监听
     private void initListener(){
         mKillProcessTgb.setOnCheckedChangeListener(this);
-        mShowSysAppsTgb.setOnClickListener(this);//11111
+        mShowSysAppsTgb.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
