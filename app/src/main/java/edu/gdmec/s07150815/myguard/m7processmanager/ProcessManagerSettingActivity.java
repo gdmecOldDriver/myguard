@@ -1,5 +1,6 @@
 package edu.gdmec.s07150815.myguard.m7processmanager;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,13 +12,14 @@ import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import edu.gdmec.s07150815.myguard.R;
+import edu.gdmec.s07150815.myguard.m7processmanager.service.AutoKillProcessService;
 import edu.gdmec.s07150815.myguard.m7processmanager.utils.SystemInfoUtils;
 
 public class ProcessManagerSettingActivity extends AppCompatActivity implements View.OnClickListener,CompoundButton.OnCheckedChangeListener{
     private ToggleButton mShowSysAppsTgb;
     private ToggleButton mKillProcessTgb;
     private SharedPreferences mSP;
-    private boolean running;
+    private boolean running;//r
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,18 +42,41 @@ public class ProcessManagerSettingActivity extends AppCompatActivity implements 
         mKillProcessTgb.setChecked(running);
         initListener();
     }
-//初始化监听
+    //初始化监听
     private void initListener(){
         mKillProcessTgb.setOnCheckedChangeListener(this);
         mShowSysAppsTgb.setOnClickListener(this);//11111
     }
     @Override
     public void onClick(View v) {
-
+        switch (v.getId()){
+            case R.id.imgv_leftbtn:
+                finish();
+                break;
+        }
     }
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
+        switch (buttonView.getId()){
+            case R.id.tgb_showsys_process:
+                saveStaus("showSystemProcess",isChecked);
+                break;
+            case R.id.tgb_killproces_locksrceen:
+                Intent service = new Intent(this, AutoKillProcessService.class);
+                if(isChecked){
+                    //开启服务
+                    startService(service);
+                }else{
+                    //关闭服务
+                    stopService(service);
+                }
+                break;
+        }
+    }
+    private void saveStaus(String string ,boolean isChecked){
+        SharedPreferences.Editor edit = mSP.edit();
+        edit.putBoolean(string,isChecked);
+        edit.commit();
     }
 }
