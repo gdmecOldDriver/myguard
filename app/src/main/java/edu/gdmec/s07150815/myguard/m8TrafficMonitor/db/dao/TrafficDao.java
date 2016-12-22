@@ -1,16 +1,11 @@
-package edu.gdmec.s07150815.myguard.m8trafficMonitor.db.dao;
+package edu.gdmec.s07150815.myguard.m8TrafficMonitor.db.dao;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.text.TextUtils;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-
-import edu.gdmec.s07150815.myguard.m8trafficMonitor.db.TrafficOpenHelper;
+import edu.gdmec.s07150815.myguard.m8TrafficMonitor.db.TrafficOpenHelper;
 
 /**
  * Created by Ivan on 2016/12/20.
@@ -48,38 +43,12 @@ public class TrafficDao {
 
         public void insertTodayGPRS(long gprs){
 
-            SQLiteDatabase db  = helper.getReadableDatabase();
-            Date dNow = new Date();
-            Calendar calendar = Calendar.getInstance();
-            calendar.setTime(dNow);
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-            String dataString = sdf.format(dNow);
-            ContentValues values = new ContentValues();
-            values.put("gprs", String.valueOf(gprs));
-            values.put("date", "datetime("+dataString+")");
-            db.insert("traffic",null,values);
-
-
 
 
         }
 
 
-        public void UpdateTodayGPRS(long gprs){
 
-            SQLiteDatabase db = helper.getWritableDatabase();
-            Date date = new Date();
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-            String dataString = sdf.format(date);
-            ContentValues values = new ContentValues();
-            values.put("gprs", String.valueOf(gprs));
-            values.put("date", "datetime("+dataString+")");
-            db.update("traffic",values,"date=?",new String[]{"datetime("+dataString+")" });
-
-
-
-
-        }
 
 
 

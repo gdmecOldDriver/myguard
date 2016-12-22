@@ -1,4 +1,4 @@
-package edu.gdmec.s07150815.myguard.m8trafficMonitor.db;
+package edu.gdmec.s07150815.myguard.m8TrafficMonitor.db;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

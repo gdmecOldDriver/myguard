@@ -84,7 +84,7 @@ public class SecurityPhoneActivity extends AppCompatActivity implements View.OnC
             pageBlackNumber.addAll(dao.getPageBlackNumber(pagenumber,pagesize));
             if (adapter==null){
                 adapter=new BlackContactAdapter(pageBlackNumber,SecurityPhoneActivity.this);
-                adapter.setCallBack(new BlackContactAdapter.BlackContactCallBack() {
+                adapter.setCallBack(new BlackContactCallBack() {
                     @Override
                     public void DataSizeChange() {
                         fillData();

@@ -17,9 +17,9 @@ public class SetUpPasswordDialog extends Dialog implements View.OnClickListener{
     //标题栏
     private TextView mTitleTV;
     //首次密码文本框
-    private EditText mFirstPWDET;
+     public EditText mFirstPWDET;
     //确定输入密码文本框
-    private EditText mAffirmET;
+     public EditText mAffirmET;
     //回调接口
     private MyCallBack myCallBack;
     public SetUpPasswordDialog(Context context) {

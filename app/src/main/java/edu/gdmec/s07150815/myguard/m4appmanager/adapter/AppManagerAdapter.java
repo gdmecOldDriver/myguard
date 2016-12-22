@@ -42,7 +42,7 @@ class AppManagerAdapter extends BaseAdapter{
     @Override
     public Object getItem(int position) {
         if (position==0) {
-            //第0个位置显示的应该是用户程序的个数的标签。
+            //第0个位置显示的应该是用户程序的个数的标签。  1
             return null;
         }else if (position==(UserAppInfos.size()+1)){
             return null;
@@ -85,7 +85,7 @@ class AppManagerAdapter extends BaseAdapter{
         }
         ViewHolder viewHolder = null ;
         if (convertView!=null & convertView instanceof LinearLayout){
-                viewHolder = (ViewHolder) convertView.getTag();
+            viewHolder = (ViewHolder) convertView.getTag();
         }else {
             viewHolder = new ViewHolder();
             convertView = View.inflate(context, R.layout.item_appmanager_list,null);
@@ -111,12 +111,12 @@ class AppManagerAdapter extends BaseAdapter{
                 viewHolder.mAppOptionLL.setVisibility(View.GONE);
             }
         }
-            MyClickListener listener = new MyClickListener(appInfo);
-            viewHolder.mLuanchAppTV.setOnClickListener(listener);
-            viewHolder.mSetringAppTV.setOnClickListener(listener);
-            viewHolder.mShareAppTV.setOnClickListener(listener);
-            viewHolder.mUnistallTV.setOnClickListener(listener);
-                return convertView;
+        MyClickListener listener = new MyClickListener(appInfo);
+        viewHolder.mLuanchAppTV.setOnClickListener(listener);
+        viewHolder.mSetringAppTV.setOnClickListener(listener);
+        viewHolder.mShareAppTV.setOnClickListener(listener);
+        viewHolder.mUnistallTV.setOnClickListener(listener);
+        return convertView;
     }
 
     private TextView getTextView() {
@@ -142,14 +142,14 @@ class AppManagerAdapter extends BaseAdapter{
         public LinearLayout mAppOptionLL;
     }
 
-     class MyClickListener implements View.OnClickListener {
-         private AppInfo appInfo;
-         public MyClickListener(AppInfo appInfo){
-             super();
-             this.appInfo = appInfo;
-         }
-         @Override
-         public void onClick(View v) {
+    class MyClickListener implements View.OnClickListener {
+        private AppInfo appInfo;
+        public MyClickListener(AppInfo appInfo){
+            super();
+            this.appInfo = appInfo;
+        }
+        @Override
+        public void onClick(View v) {
             switch (v.getId()){
                 case R.id.tv_launch_app:
                     //启动程序
@@ -172,6 +172,6 @@ class AppManagerAdapter extends BaseAdapter{
                     EngineUtils.uninstallApplication(context,appInfo);
                     break;
             }
-         }
-     }
+        }
+    }
 }
