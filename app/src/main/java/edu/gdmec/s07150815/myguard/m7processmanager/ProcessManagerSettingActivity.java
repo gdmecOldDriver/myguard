@@ -19,7 +19,7 @@ public class ProcessManagerSettingActivity extends AppCompatActivity implements 
     private ToggleButton mShowSysAppsTgb;
     private ToggleButton mKillProcessTgb;
     private SharedPreferences mSP;
-    private boolean running;//r
+    private boolean running;//r1s
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
