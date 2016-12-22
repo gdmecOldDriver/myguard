@@ -60,7 +60,7 @@ public class CacheClearListActivity extends AppCompatActivity implements View.On
                   //在主线程添加变化后的集合
                   mCacheInfos.clear();
                   mCacheInfos.addAll(cacheInfos);
-                  //ListView刷新
+                  //ListView   刷新
                   adapter.notifyDataSetChanged();
                   break;
               case FINISH:
