@@ -70,7 +70,7 @@ public class ContactInfoParser {
                 infos.add(info);
             }
         }
-       // mCursor.close();
+        //mCursor.close();
         return infos;
     }
 }

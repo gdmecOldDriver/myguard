@@ -22,6 +22,9 @@ import edu.gdmec.s07150815.myguard.m2theftguard.dialog.SetUpPasswordDialog;
 import edu.gdmec.s07150815.myguard.m2theftguard.receiver.MyDeviceAdminReciver;
 import edu.gdmec.s07150815.myguard.m2theftguard.utils.MD5Utils;
 import edu.gdmec.s07150815.myguard.m3communicationguard.SecurityPhoneActivity;
+import edu.gdmec.s07150815.myguard.m4appmanager.AppManagerActivity;
+import edu.gdmec.s07150815.myguard.m5virusscan.VirusScanActivity;
+import edu.gdmec.s07150815.myguard.m6cleancache.CacheClearListActivity;
 import edu.gdmec.s07150815.myguard.m7processmanager.ProcessManagerActivity;
 /*import edu.gdmec.s07150815.myguard.m4appmanager.AppManagerActivity;
 import edu.gdmec.s07150815.myguard.m5virusscan.VirusScanActivity;
@@ -68,17 +71,18 @@ public class HomeActivity extends AppCompatActivity {
                         startActivity(SecurityPhoneActivity.class);
                         break;
                     case 2://软件管家
-//                        startActivity(AppManagerActivity.class);
-//                        break;
+                        startActivity(AppManagerActivity.class);
+                        break;
                     case 3://手机杀毒
-                        //startActivity(VirusScanActivity.class);
-                        //break;
+                        startActivity(VirusScanActivity.class);
+                        break;
                     case 4://缓存清理
-//                        startActivity(CacheClearListActivity.class);
-//                        break;
+                        startActivity(CacheClearListActivity.class);
+                        break;
+
                     case 5://进程管理
                        startActivity(ProcessManagerActivity.class);
-                     break;
+                        break;
                     case 6://流量统计
 //                        startActivity(TrafficMonitorActivity.class);
 //                        break;

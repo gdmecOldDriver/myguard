@@ -85,7 +85,7 @@ public class AppManagerActivity extends AppCompatActivity implements View.OnClic
         ImageView mLeftImgv = (ImageView) findViewById(R.id.imgv_leftbtn);
         ((TextView)findViewById(R.id.tv_title)).setText("软件管家");
         mLeftImgv.setOnClickListener(this);
-       // mLeftImgv.setImageResource(R.drawable.back);
+        mLeftImgv.setImageResource(R.drawable.back);
         mPhoneMemoryTV = (TextView) findViewById(R.id.tv_phonememory_appmanager);
         mSDMemoryTV = (TextView) findViewById(R.id.tv_sdmemory_appmanager);
         mAppNumTV = (TextView) findViewById(R.id.tv_appnumbar);
