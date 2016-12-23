@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical">
+
     <include layout="@layout/titlebar"/>
 
     <RelativeLayout
@@ -16,14 +17,14 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:text="安全号码"
-            android:textColor="@color/purple"/>
+            android:textColor="@color/purple" />
         <TextView
             android:id="@+id/tv_safephone"
             style="@style/textview16sp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="15dp"
-            android:textColor="@color/purple"/>
+            android:textColor="@color/purple"
+            android:layout_marginRight="15dp" />
     </RelativeLayout>
     <View
         android:layout_width="match_parent"

@@ -21,7 +21,7 @@ import edu.gdmec.s07150815.myguard.m4appmanager.utils.EngineUtils;
 /**
  * Created by D on 2016/12/19.
  */
-class AppManagerAdapter extends BaseAdapter{
+public class AppManagerAdapter extends BaseAdapter{
     private List<AppInfo> UserAppInfos;
     private List<AppInfo> SystemAppInfos;
     private Context context;

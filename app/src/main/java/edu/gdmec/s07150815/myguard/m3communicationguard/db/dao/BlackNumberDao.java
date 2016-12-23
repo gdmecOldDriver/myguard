@@ -60,7 +60,7 @@ public class BlackNumberDao {
         Cursor cursor=db.rawQuery(
                 "select number,mode,name from blacknumber limit ? offset ?",
                 new String[]{String.valueOf(pagesize),String.valueOf(pagesize*pagenumber) });
-        List<BlackContactInfo>mBlackContactInfos =new ArrayList<BlackContactInfo>();
+        List<BlackContactInfo> mBlackContactInfos =new ArrayList<BlackContactInfo>();
         while (cursor.moveToNext()){
             BlackContactInfo info=new BlackContactInfo();
             info.phoneNumber=cursor.getString(0);

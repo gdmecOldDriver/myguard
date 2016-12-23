@@ -10,6 +10,7 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -47,7 +48,8 @@ public class ContactSelectActivity extends AppCompatActivity implements View.OnC
   initView();
  }
  private void initView(){
- findViewById(R.id.rl_titlebar).setBackgroundColor(getResources().getColor(R.color.bright_purple));
+  ((TextView)findViewById(R.id.tv_title)).setText("选择联系人");
+  findViewById(R.id.rl_titlebar).setBackgroundColor(getResources().getColor(R.color.bright_purple));
   ImageView mLeftImgv= (ImageView) findViewById(R.id.imgv_leftbtn);
   mLeftImgv.setOnClickListener(this);
   mLeftImgv.setImageResource(R.drawable.back);

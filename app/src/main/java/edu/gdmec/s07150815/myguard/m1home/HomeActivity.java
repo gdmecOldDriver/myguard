@@ -65,8 +65,8 @@ public class HomeActivity extends AppCompatActivity {
                         break;
                     //后续代码需要其他模块完成后才能启用
                     case 1://点击通讯卫士SecuritPhoneActivity
-                       // startActivity(SecurityPhoneActivity.class);
-                       // break;
+                        startActivity(SecurityPhoneActivity.class);
+                        break;
                     case 2://软件管家
 //                        startActivity(AppManagerActivity.class);
 //                        break;
@@ -212,7 +212,7 @@ public class HomeActivity extends AppCompatActivity {
     public void startActivity(Class<?> cls) {
         //重写homeactivity内的startactivity方法
         Intent intent = new Intent(HomeActivity.this, cls);
-        //即每次调用该方法都打开一次homeactivity
+        //即每次调用该方法都打开一次homeactivity/
         startActivity(intent);
     }
 

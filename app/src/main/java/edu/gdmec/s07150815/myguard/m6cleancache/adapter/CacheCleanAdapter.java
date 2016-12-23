@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
-import java.util.logging.Formatter;
+import android.text.format.Formatter;
 
 import edu.gdmec.s07150815.myguard.R;
 import edu.gdmec.s07150815.myguard.m6cleancache.entity.CacheInfo;
