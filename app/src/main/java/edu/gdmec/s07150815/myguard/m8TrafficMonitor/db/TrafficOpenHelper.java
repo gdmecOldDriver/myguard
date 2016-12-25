@@ -1,4 +1,4 @@
-package edu.gdmec.s07150815.myguard.m8TrafficMonitor.db;
+package edu.gdmec.s07150815.myguard.m8trafficMonitor.db;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -11,7 +11,7 @@ public class TrafficOpenHelper extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "traffic.db";
     private static final String TABLE_NAME = "traffic";
-
+    //流量
     private final static String GPRS = "gprs";
     private final static String TIME = "date";
 

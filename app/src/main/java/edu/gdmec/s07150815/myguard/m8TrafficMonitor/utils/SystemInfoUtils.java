@@ -1,6 +1,5 @@
-package edu.gdmec.s07150815.myguard.m8TrafficMonitor.utils;
+package edu.gdmec.s07150815.myguard.m8trafficMonitor.utils;
 
-import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
 
@@ -11,6 +10,7 @@ import java.util.List;
  */
 public class SystemInfoUtils {
 
+    //判断一个服务是否出于运行状态
 
     public static boolean isServiceRunning(Context context,String className){
 
