@@ -74,10 +74,10 @@ public class SecurityPhoneActivity extends AppCompatActivity implements View.OnC
         if (totalNumber == 0) {
             mHaveBlackNumber.setVisibility(View.GONE);
             mNoBlackNumber.setVisibility(View.VISIBLE);
-            pagenumber = 0;
+
         } else if (totalNumber > 0) {
             mHaveBlackNumber.setVisibility(View.VISIBLE);
-            mHaveBlackNumber.setVisibility(View.GONE);
+            mNoBlackNumber.setVisibility(View.GONE);
             pagenumber = 0;
             if (pageBlackNumber.size() > 0) {
                 pageBlackNumber.clear();
