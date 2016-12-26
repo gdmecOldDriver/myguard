@@ -30,6 +30,7 @@
         android:id="@+id/view_black_delete"
         android:background="@drawable/delete_icon"
         android:layout_marginRight="20dp"
-        android:layout_centerVertical="true"/>
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"/>
 
 </RelativeLayout>

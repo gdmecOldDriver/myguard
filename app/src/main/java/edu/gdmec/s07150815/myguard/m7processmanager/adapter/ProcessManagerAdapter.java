@@ -76,7 +76,7 @@ public class ProcessManagerAdapter extends BaseAdapter {
         }
         //获取TaskInfo对象1
         TaskInfo taskInfo = null;
-        if(position<=mSystaskInfos.size()){
+        if(position<=mUsertaskInfo.size()){
             taskInfo = mUsertaskInfo.get(position-1);
         }else if (mSystaskInfos.size()>0){
             taskInfo = mSystaskInfos.get(position-mUsertaskInfo.size()-2);
@@ -89,7 +89,7 @@ public class ProcessManagerAdapter extends BaseAdapter {
             holder = new ViewHolder();
             holder.mAppIconImgv = (ImageView) convertView.findViewById(R.id.imgv_appicon_processmana);
             holder.mAppMemoryTV = (TextView) convertView.findViewById(R.id.tv_appmemory_processmana);
-            holder.mAppNameTV = (TextView) convertView.findViewById(R.id.tv_appmemory_processmana);
+            holder.mAppNameTV = (TextView) convertView.findViewById(R.id.tv_appname_processmana);
             holder.mCheckBox = (CheckBox) convertView.findViewById(R.id.checkBox);
             convertView.setTag(holder);
         }

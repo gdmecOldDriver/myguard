@@ -101,27 +101,29 @@ public class AppManagerActivity extends AppCompatActivity implements View.OnClic
             public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
                 if (adapter!=null) {
                     new Thread(){
-                        public void  run(){
-                            AppInfo mappInfo = (AppInfo) adapter.getItem(position);
-                            //记住当前条目的状态
-                            boolean flag = mappInfo.isSelected;
-                            //先将集合中的所有条目地AppInfo变为未选中的状态
-                            for (AppInfo appInfo:userAppInfos){
-                                appInfo.isSelected =false;
-                            }
-                            for (AppInfo appInfo:systemAppInfos){
-                                appInfo.isSelected = false;
-                            }
-                            if (mappInfo!=null){
-                                //如果选中，则变为未选中
-                                if (flag){
-                                    mappInfo.isSelected = false;
-                                }else {
-                                    mappInfo.isSelected = true;
+                        public void  run() {
+                            if (position != 0 && position != userAppInfos.size() + 1) {
+                                AppInfo mappInfo = (AppInfo) adapter.getItem(position);
+                                //记住当前条目的状态
+                                boolean flag = mappInfo.isSelected;
+                                //先将集合中的所有条目地AppInfo变为未选中的状态
+                                for (AppInfo appInfo : userAppInfos) {
+                                    appInfo.isSelected = false;
                                 }
-                                mHandler.sendEmptyMessage(15);
+                                for (AppInfo appInfo : systemAppInfos) {
+                                    appInfo.isSelected = false;
+                                }
+                                if (mappInfo != null) {
+                                    //如果选中，则变为未选中
+                                    if (flag) {
+                                        mappInfo.isSelected = false;
+                                    } else {
+                                        mappInfo.isSelected = true;
+                                    }
+                                    mHandler.sendEmptyMessage(15);
+                                }
                             }
-                        };
+                        }
                     }.start();
                 }
             }

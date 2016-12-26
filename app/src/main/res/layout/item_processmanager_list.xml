@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:minHeight="50dip"
     >
 
     <ImageView
@@ -28,7 +29,7 @@
 
     <TextView
         android:id="@+id/tv_appmemory_processmana"
-        style="@style/tvyellow14sp"
+        style="@style/textview14sp"
         android:layout_margin="5dp"
         android:layout_below="@+id/tv_appname_processmana"
         android:layout_toRightOf="@+id/imgv_appicon_processmana"
@@ -43,5 +44,6 @@
         android:layout_centerVertical="true"
         android:focusable="false"
         android:clickable="false"
+        android:layout_marginRight="10dp"
         />
 </RelativeLayout>

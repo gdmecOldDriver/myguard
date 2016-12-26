@@ -102,7 +102,7 @@ public class ProcessManagerActivity extends AppCompatActivity implements View.On
                 if(firstVisibleItem>=userTaskInfos.size()+1){
                     mProcesNumTV.setText("系统进程"+sysTaskInfo.size()+"个");
                 }else {
-                    mProcesNumTV.setText("用户进程"+userTaskInfos+"个");
+                    mProcesNumTV.setText("用户进程"+userTaskInfos.size()+"个");
                 }
             }
         });
