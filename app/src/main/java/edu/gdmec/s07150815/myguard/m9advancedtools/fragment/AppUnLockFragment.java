@@ -1,8 +1,10 @@
 package edu.gdmec.s07150815.myguard.m9advancedtools.fragment;
 
-import android.app.Fragment;
+
+import android.support.v4.app.Fragment;
 import android.database.ContentObserver;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -20,14 +22,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.gdmec.s07150815.myguard.R;
-import edu.gdmec.s07150815.myguard.m4appmanager.entity.AppInfo;
-import edu.gdmec.s07150815.myguard.m4appmanager.utils.AppInfoParser;
+import edu.gdmec.s07150815.myguard.m9advancedtools.entity.AppInfo;
+import edu.gdmec.s07150815.myguard.m9advancedtools.utils.AppInfoParser;
 import edu.gdmec.s07150815.myguard.m9advancedtools.adapter.AppLockAdapter;
 import edu.gdmec.s07150815.myguard.m9advancedtools.db.dao.AppLockDao;
 
 /**
  * Created by ys on 2016/12/22.
  */
+
 public class AppUnLockFragment extends Fragment{
     private TextView mUnLockTV;
     private ListView mUnLockLV;

@@ -8,7 +8,7 @@ import android.graphics.drawable.Drawable;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.gdmec.s07150815.myguard.m4appmanager.entity.AppInfo;
+import edu.gdmec.s07150815.myguard.m9advancedtools.entity.AppInfo;
 
 /**
  * Created by ys on 2016/12/22.
@@ -17,7 +17,7 @@ import edu.gdmec.s07150815.myguard.m4appmanager.entity.AppInfo;
 public class AppInfoParser {
     //获取手机里面的所有应用程序
     //context 上下文
-    public static List<AppInfo> getAppInfos(Context context){
+    public static List<edu.gdmec.s07150815.myguard.m9advancedtools.entity.AppInfo> getAppInfos(Context context){
       //得到一个java保证的 包管理器
         PackageManager pm=context.getPackageManager();
         List<PackageInfo>packInfos=pm.getInstalledPackages(0);

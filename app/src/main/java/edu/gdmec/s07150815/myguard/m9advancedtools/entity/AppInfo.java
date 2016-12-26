@@ -14,6 +14,7 @@ public class AppInfo {
     //应用程序名称
     public String appName;
     //应用程序路径
-    public boolean isLock;
+    public String apkPath;
     //应用程序是否加锁
+    public boolean isLock;
 }

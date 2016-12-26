@@ -1,8 +1,10 @@
 package edu.gdmec.s07150815.myguard.m9advancedtools.fragment;
 
+import android.annotation.TargetApi;
 import android.app.Fragment;
 import android.database.ContentObserver;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -20,14 +22,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.gdmec.s07150815.myguard.R;
-import edu.gdmec.s07150815.myguard.m4appmanager.entity.AppInfo;
-import edu.gdmec.s07150815.myguard.m4appmanager.utils.AppInfoParser;
+import edu.gdmec.s07150815.myguard.m9advancedtools.entity.AppInfo;
+import edu.gdmec.s07150815.myguard.m9advancedtools.utils.AppInfoParser;
 import edu.gdmec.s07150815.myguard.m9advancedtools.adapter.AppLockAdapter;
 import edu.gdmec.s07150815.myguard.m9advancedtools.db.dao.AppLockDao;
 
 /**
  * Created by ys on 2016/12/22.
  */
+@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class AppLockFragment extends Fragment{
     private TextView mLockTV;
     private ListView mLockLV;
@@ -36,6 +39,7 @@ public class AppLockFragment extends Fragment{
     private AppLockAdapter adapter;
     private Uri uri=Uri.parse("content://com.itcast.mobilesafe.applock");
     private Handler mHandle=new Handler() {
+        @TargetApi(Build.VERSION_CODES.HONEYCOMB)
         public void handleMessage(android.os.Message msg) {
             switch (msg.what) {
                 case 10:

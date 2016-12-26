@@ -1,5 +1,6 @@
 package edu.gdmec.s07150815.myguard.m9advancedtools.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +12,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import edu.gdmec.s07150815.myguard.R;
-import edu.gdmec.s07150815.myguard.m4appmanager.entity.AppInfo;
+import edu.gdmec.s07150815.myguard.m9advancedtools.entity.AppInfo;
 
 /**
  * Created by ys on 2016/12/22.
@@ -26,6 +27,9 @@ public class AppLockAdapter extends BaseAdapter{
         this.appInfos=appInfos;
         this.context=context;
     }
+
+
+
     @Override
     public int getCount() {
         return appInfos.size();
