@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/myguard.iml" filepath="$PROJECT_DIR$/myguard.iml" />
-      <module fileurl="file://$PROJECT_DIR$/myguard-m9.iml" filepath="$PROJECT_DIR$/myguard-m9.iml" />
     </modules>
   </component>
 </project>
