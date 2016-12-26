@@ -26,6 +26,7 @@ import edu.gdmec.s07150815.myguard.m4appmanager.AppManagerActivity;
 import edu.gdmec.s07150815.myguard.m5virusscan.VirusScanActivity;
 import edu.gdmec.s07150815.myguard.m6cleancache.CacheClearListActivity;
 import edu.gdmec.s07150815.myguard.m7processmanager.ProcessManagerActivity;
+import edu.gdmec.s07150815.myguard.m8trafficMonitor.TrafficMonitoringActivity;
 
 public class HomeActivity extends AppCompatActivity {
     //声明GirdView 该控件类似listview
@@ -81,8 +82,8 @@ public class HomeActivity extends AppCompatActivity {
                         startActivity(ProcessManagerActivity.class);
                         break;
                     case 6://流量统计
-//                        startActivity(TrafficMonitorActivity.class);
-//                        break;
+                        startActivity(TrafficMonitoringActivity.class);
+                        break;
                     case 7 ://高级工具
 //                        startActivity(AdvancedToolsActivity.class);
 //                        break;

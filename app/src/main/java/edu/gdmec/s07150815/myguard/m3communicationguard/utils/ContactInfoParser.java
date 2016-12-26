@@ -18,8 +18,8 @@ public class ContactInfoParser {
     public static List<ContactInfo> getSystemContact(Context context){
         ContentResolver resolver=context.getContentResolver();
         //1、查询raw_contacts表，把联系人的词取出来
-        Uri uri=Uri.parse("content://com.adroid.contacts/raw_contacts");
-        Uri datauri=Uri.parse("content://com.addroid.contacts/data");
+        Uri uri=Uri.parse("content://com.android.contacts/raw_contacts");
+        Uri datauri=Uri.parse("content://com.android.contacts/data");
         List<ContactInfo> infos=new ArrayList<ContactInfo>();
         Cursor cursor= resolver.query(uri,new String[]{"contact_id"},
                 null,null,null);
@@ -32,7 +32,7 @@ public class ContactInfoParser {
                 //2、根据联系人的id,查询data表。把这个id的数据取出来
                 //系统api查询data表的时候 不是真的查询data表 而是查询data表的视图
                 Cursor dataCursor= resolver.query(datauri,new String[]{
-                        "data","mimetype"},"raw_contact_id=?",new String[]{id},null);
+                        "data1","mimetype"},"raw_contact_id=?",new String[]{id},null);
                 while (dataCursor.moveToNext()){
                     String data1=dataCursor.getString(0);
                     String mimetype=dataCursor.getString(1);

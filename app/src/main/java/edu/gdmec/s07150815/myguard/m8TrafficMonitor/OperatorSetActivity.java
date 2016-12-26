@@ -33,6 +33,7 @@ public class OperatorSetActivity extends AppCompatActivity implements View.OnCli
 
     }
     @SuppressWarnings("unchecked")
+
     private void initView(){
         findViewById(R.id.rl_titlebar).setBackgroundColor(getResources().getColor(R.color.light_green));
         ImageView mLeftImgv = (ImageView) findViewById(R.id.imgv_leftbtn);
