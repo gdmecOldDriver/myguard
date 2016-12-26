@@ -121,7 +121,7 @@ public class AppManagerAdapter extends BaseAdapter{
 
     private TextView getTextView() {
         TextView tv = new TextView(context);
-        tv.setBackgroundColor(ContextCompat.getColor(context,R.color.garye5));
+        tv.setBackgroundColor(ContextCompat.getColor(context,R.color.graye5));
         tv.setPadding(DensityUtil.dip2px(context,5),
                 DensityUtil.dip2px(context,5),
                 DensityUtil.dip2px(context,5),

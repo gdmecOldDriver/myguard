@@ -24,7 +24,8 @@ public class AntiVirusDao {
         String desc = null;
         //打开病毒库
         SQLiteDatabase db = SQLiteDatabase.openDatabase(dbname,null,SQLiteDatabase.OPEN_READONLY);
-        Cursor cursor = db.rawQuery("select desc from datebale where md5=?",new String[]{md5});
+         Cursor cursor = db.rawQuery("select desc from datable where md5=?"
+                 ,new String[] {md5});
         if (cursor.moveToNext()){
             desc = cursor.getString(0);
         }

@@ -26,7 +26,7 @@ import java.util.Date;
 import java.util.List;
 
 import java.util.Locale;
-import java.util.logging.LogRecord;
+
 
 import edu.gdmec.s07150815.myguard.R;
 import edu.gdmec.s07150815.myguard.m5virusscan.adapter.ScanVirusAdapter;
@@ -96,9 +96,28 @@ public class VirusScanSpeedActivity extends AppCompatActivity implements View.On
         setContentView(R.layout.activity_virus_scan_speed);
         pm = getPackageManager();
         mSP = getSharedPreferences("config",MODE_PRIVATE);
-       // initView();
+        initView();
         scanVirus();
     }
+
+    /*初始化控件*/
+    private void initView() {
+        findViewById(R.id.rl_titlebar).setBackgroundColor(getResources().getColor(R.color.light_blue));
+        ImageView mLeftImgv = (ImageView) findViewById(R.id.imgv_leftbtn);
+        ((TextView)findViewById(R.id.tv_title)).setText("病毒查杀进度");
+        mLeftImgv.setOnClickListener(this);
+        mLeftImgv.setImageResource(R.drawable.back);
+        mProcessTV = (TextView) findViewById(R.id.tv_scanprocess);
+        mScanAppTV = (TextView) findViewById(R.id.tv_scansapp);
+        mCancleBtn = (Button) findViewById(R.id.btn_canclescan);
+        mCancleBtn.setOnClickListener(this);
+        mScanListView = (ListView) findViewById(R.id.lv_scannapps);
+        adapter = new ScanVirusAdapter(mScanAppInfos,this);
+        mScanListView.setAdapter(adapter);
+        mScanningIcon = (ImageView) findViewById(R.id.imgv_scanningcon);
+        startAnim();
+    }
+
 
     /*扫描病毒*/
     private void scanVirus() {
@@ -154,23 +173,8 @@ public class VirusScanSpeedActivity extends AppCompatActivity implements View.On
             };
         }.start();
     }
-    /*初始化控件*/
-    /*private void initView() {
-        findViewById(R.id.rl_titlebar).setBackgroundColor(getResources().getColor(R.color.light_blue));
-        ImageView mLeftImgv = (ImageView) findViewById(R.id.imgv_leftbtn);
-        ((TextView)findViewById(R.id.tv_title)).setText("病毒查杀进度");
-        mLeftImgv.setOnClickListener(this);
-        mLeftImgv.setImageResource(R.drawable.back);
-        mProcessTV = (TextView) findViewById(R.id.tv_scanprocess);
-        mScanAppTV = (TextView) findViewById(R.id.tv_scansapp);
-        mCancleBtn = (Button) findViewById(R.id.btn_canclescan);
-        mCancleBtn.setOnClickListener(this);
-        mScanListView = (ListView) findViewById(R.id.lv_scannapps);
-        adapter = new ScanVirusAdapter(mScanAppInfos,this);
-        mScanListView.setAdapter(adapter);
-        mScanningIcon = (ImageView) findViewById(R.id.imgv_scanningcon);
-        startAnim();
-    }*/
+
+
 
     private void startAnim() {
         if(rani== null){
@@ -192,6 +196,7 @@ public class VirusScanSpeedActivity extends AppCompatActivity implements View.On
                     //扫描完成
                     finish();
                 }else if (process>0&process<total&isStop==false){
+                    mScanningIcon.clearAnimation();
                     //取消扫描
                     flag =false;
                     //更换背景图片

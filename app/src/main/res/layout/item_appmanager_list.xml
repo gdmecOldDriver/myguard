@@ -34,11 +34,13 @@
             android:layout_alignLeft="@+id/tv_appname"
             android:layout_below="@+id/tv_appname"
             />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:background="@color/black30"/>
+
     </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/black30"/>
     <LinearLayout
             android:id="@+id/ll_option_app"
             android:layout_width="match_parent"
@@ -49,7 +51,7 @@
 
             <TextView
                 android:id="@+id/tv_launch_app"
-                style="@style/textview14sp"
+                style="@style/tvyellow14sp"
                 android:drawableTop="@drawable/phoneicon_yellow_n"
                 android:text="启动"/>
             <View
@@ -82,9 +84,6 @@
                 android:drawableTop="@drawable/settingicon_yellow_n"
                 android:text="设置"
                 />
-            <View
-                android:layout_width="1px"
-                android:layout_height="match_parent"
-                android:background="@color/black30"/>
+
         </LinearLayout>
 </LinearLayout>

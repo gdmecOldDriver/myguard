@@ -4,8 +4,8 @@ import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
@@ -26,9 +26,6 @@ import edu.gdmec.s07150815.myguard.m4appmanager.AppManagerActivity;
 import edu.gdmec.s07150815.myguard.m5virusscan.VirusScanActivity;
 import edu.gdmec.s07150815.myguard.m6cleancache.CacheClearListActivity;
 import edu.gdmec.s07150815.myguard.m7processmanager.ProcessManagerActivity;
-/*import edu.gdmec.s07150815.myguard.m4appmanager.AppManagerActivity;
-import edu.gdmec.s07150815.myguard.m5virusscan.VirusScanActivity;
-import edu.gdmec.s07150815.myguard.m5virusscan.utils.MD5Utils;*/
 
 public class HomeActivity extends AppCompatActivity {
     //声明GirdView 该控件类似listview
@@ -81,7 +78,7 @@ public class HomeActivity extends AppCompatActivity {
                         break;
 
                     case 5://进程管理
-                       startActivity(ProcessManagerActivity.class);
+                        startActivity(ProcessManagerActivity.class);
                         break;
                     case 6://流量统计
 //                        startActivity(TrafficMonitorActivity.class);
@@ -213,6 +210,10 @@ public class HomeActivity extends AppCompatActivity {
     //开启新的activity不关闭自己
     //什么意思
     //cls 新的activity的字节码
+
+
+
+
     public void startActivity(Class<?> cls) {
         //重写homeactivity内的startactivity方法
         Intent intent = new Intent(HomeActivity.this, cls);

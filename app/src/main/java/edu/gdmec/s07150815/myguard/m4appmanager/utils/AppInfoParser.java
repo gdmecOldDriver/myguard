@@ -19,9 +19,9 @@ public class AppInfoParser {
     public static List<AppInfo> getAppInfos(Context context){
         //得到一个java保证的包管理器。
         PackageManager pm = context.getPackageManager();
-        List<PackageInfo> packageInfos = pm.getInstalledPackages(0);
+        List<PackageInfo> packInfos = pm.getInstalledPackages(0);
         List<AppInfo> appInfos = new ArrayList<AppInfo>();
-        for(PackageInfo packInfo:packageInfos){
+        for(PackageInfo packInfo:packInfos){
             AppInfo appinfo = new AppInfo();
             String packname = packInfo.packageName;
             appinfo.packageName = packname;

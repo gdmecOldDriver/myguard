@@ -46,7 +46,7 @@ public class ScanVirusAdapter extends BaseAdapter{
         if (convertView==null){
             convertView = View.inflate(context, R.layout.item_list_applock,null);
             holder = new ViewHolder();
-            holder.mAppIconImgv = (ImageView)convertView.findViewById(R.id.imav_appicon);
+            holder.mAppIconImgv = (ImageView)convertView.findViewById(R.id.imgv_appicon);
             holder.mAppNameTV = (TextView) convertView.findViewById(R.id.tv_appname);
             holder.mScanIconImgv = (ImageView) convertView.findViewById(R.id.imgv_lock);
             convertView.setTag(holder);
@@ -63,7 +63,7 @@ public class ScanVirusAdapter extends BaseAdapter{
             holder.mAppNameTV.setText(scanAppInfo.appName+"("+scanAppInfo.description+")");
         }
         holder.mAppIconImgv.setImageDrawable(scanAppInfo.appicon);
-        return null;
+        return convertView;
     }
 
     static class ViewHolder {

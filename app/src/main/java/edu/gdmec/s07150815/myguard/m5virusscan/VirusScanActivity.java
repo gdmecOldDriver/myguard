@@ -34,6 +34,17 @@ public class VirusScanActivity extends AppCompatActivity implements View.OnClick
         initView();
     }
 
+    /** 初始化控件*/
+    private void initView() {
+        findViewById(R.id.rl_titlebar).setBackgroundColor(getResources().getColor(R.color.light_blue));
+        ImageView mLeftImgv = (ImageView) findViewById(R.id.imgv_leftbtn);
+        ((TextView)findViewById(R.id.tv_title)).setText("病毒查杀");
+        mLeftImgv.setOnClickListener(this);
+        mLeftImgv.setImageResource(R.drawable.back);
+        mLastTimeTV = (TextView) findViewById(R.id.tv_lastscantime);
+        findViewById(R.id.rl_allscanvirus).setOnClickListener(this);
+    }
+
     @Override
     protected void onResume() {
         String string = mSP.getString("lastVirusScan","您还没有查杀病毒!");
@@ -41,8 +52,7 @@ public class VirusScanActivity extends AppCompatActivity implements View.OnClick
         super.onResume();
     }
 
-    private void initView() {
-    }
+
 
     private void copyDB(final String dbname) {
         new Thread(){
@@ -70,16 +80,8 @@ public class VirusScanActivity extends AppCompatActivity implements View.OnClick
             };
         }.start();
     }
-    /** 初始化控件*/
-    /*private void initView(){
-        findViewById(R.id.rl_titlebar).setBackgroundColor(getResources().getColor(R.color.light_blue));
-        ImageView mLeftImgv = (ImageView) findViewById(R.id.imgv_leftbtn);
-        ((TextView)findViewById(R.id.tv_title)).setText("病毒查杀");
-        mLeftImgv.setOnClickListener(this);
-        mLeftImgv.setImageResource(R.drawable.back);
-        mLastTimeTV = (TextView) findViewById(R.id.tv_lastscantime);
-        findViewById(R.id.rl_allscanvirus).setOnClickListener(this);
-    }*/
+
+
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -87,7 +89,7 @@ public class VirusScanActivity extends AppCompatActivity implements View.OnClick
                 finish();
                 break;
             case R.id.rl_allscanvirus:
-                startActivity(new Intent(this,VirusScanActivity.class));
+                startActivity(new Intent(this,VirusScanSpeedActivity.class));
                 break;
         }
     }

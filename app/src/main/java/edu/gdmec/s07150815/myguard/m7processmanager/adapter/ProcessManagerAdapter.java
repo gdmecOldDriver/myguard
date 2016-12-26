@@ -108,7 +108,7 @@ public class ProcessManagerAdapter extends BaseAdapter {
     }
 private TextView getTextView(){
     TextView tv = new TextView(context);
-    tv.setBackgroundColor(context.getResources().getColor(R.color.garye5));
+    tv.setBackgroundColor(context.getResources().getColor(R.color.graye5));
     tv.setPadding(DensityUtil.dip2px(context,5),DensityUtil.dip2px(context,5),DensityUtil.dip2px(context,5),DensityUtil.dip2px(context,5));
     tv.setTextColor(context.getResources().getColor(R.color.black));
     return tv;

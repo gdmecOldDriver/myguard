@@ -3,6 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
+
     <include layout="@layout/titlebar"/>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -34,7 +36,7 @@
                 android:id="@+id/tv_appnumbar"
                 android:padding="5dp"
                 android:textColor="@color/black"
-                android:background="@color/garye5"/>
+                android:background="@color/graye5"/>
 
     </FrameLayout>
 </LinearLayout>
