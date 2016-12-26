@@ -20,11 +20,11 @@ public class TrafficDao {
 
     private TrafficOpenHelper helper;
 
-    public TrafficDao(Context context){
+        public TrafficDao(Context context){
 
-    helper = new TrafficOpenHelper(context);
+            helper = new TrafficOpenHelper(context);
 
-    }
+        }
 
 //获取某一天用的流量
     public long getMoblieGPRS(String dataString){

@@ -113,7 +113,19 @@
             android:enabled="true"
             android:exported="true"/>
 
-
+        <activity android:name=".m8trafficMonitor.OperatorSetActivity"/>
+        <activity android:name=".m8trafficMonitor.TrafficMonitoringActivity"/>
+        <service android:name=".m8trafficMonitor.service.TrafficMonitoringService"
+            android:enabled="true"
+            android:exported="true"
+            android:persistent = "true"/>
+        <receiver android:name=".m8trafficMonitor.receiver.BootCompleteReciever"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
 
     </application>
 
