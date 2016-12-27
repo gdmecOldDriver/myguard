@@ -37,7 +37,7 @@ public class AppLockService extends Service {
     }
     @Override
     public void onCreate() {
-        //创建AppLockDao实例
+        //创 建 AppLockDao实例
         dao=new AppLockDao(this);
         observer=new MyObserver(new Handler());
         getContentResolver().registerContentObserver(uri,true,observer);
