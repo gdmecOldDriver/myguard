@@ -1,7 +1,7 @@
 package edu.gdmec.s07150815.myguard.m9advancedtools.fragment;
 
 import android.annotation.TargetApi;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.database.ContentObserver;
 import android.net.Uri;
 import android.os.Build;
@@ -40,7 +40,7 @@ public class AppLockFragment extends Fragment{
     private Uri uri=Uri.parse("content://com.itcast.mobilesafe.applock");
     private Handler mHandle=new Handler() {
         @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-        public void handleMessage(android.os.Message msg) {
+        public void handleMessage(Message msg) {
             switch (msg.what) {
                 case 10:
                     mLockApps.clear();

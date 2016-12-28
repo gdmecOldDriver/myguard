@@ -3,7 +3,6 @@ package edu.gdmec.s07150815.myguard.m10settings;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
@@ -14,6 +13,7 @@ import android.widget.TextView;
 import edu.gdmec.s07150815.myguard.R;
 import edu.gdmec.s07150815.myguard.m10settings.utils.SystemInfoUtils;
 import edu.gdmec.s07150815.myguard.m10settings.widget.SettingView;
+import edu.gdmec.s07150815.myguard.m9advancedtools.service.AppLockService;
 
 /**
  * Created by Ivan on 2016/12/22.
@@ -52,7 +52,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     protected void onStart() {
-        running = SystemInfoUtils.isServiceRunning(this,"cn.itcast.mobliesafe.chapter09.service.AppLockService");
+        running = SystemInfoUtils.isServiceRunning(this,"edu.gdmec.s07150815.myguard..m9advancedtools.service.AppLockService");
         mAppLockSV.setChecked(running);
         mBlackNumSV.setChecked(mSp.getBoolean("BlackNumStatus",true));
         super.onStart();
@@ -69,7 +69,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 saveStatus("AppLockStatus",isChecked);
                 //开启或者关闭看门狗服务aaa
                 if(isChecked){
-                    //           intent = new Intent(this,AppLockService.class);
+                    intent = new Intent(this,AppLockService.class);
                     startService(intent);
 
                 }else{

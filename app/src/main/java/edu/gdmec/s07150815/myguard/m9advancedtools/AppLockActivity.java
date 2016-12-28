@@ -114,9 +114,10 @@ public class AppLockActivity extends FragmentActivity implements View.OnClickLis
         }
 
         @Override
-        public Fragment getItem(int arg0) {
-            return mFragments.get(arg0);
+        public Fragment getItem(int position) {
+            return null;
         }
+
 
         @Override
         public int getCount() {

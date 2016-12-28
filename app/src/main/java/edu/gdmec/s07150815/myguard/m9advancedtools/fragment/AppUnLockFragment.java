@@ -1,14 +1,12 @@
 package edu.gdmec.s07150815.myguard.m9advancedtools.fragment;
 
 
-import android.support.v4.app.Fragment;
 import android.database.ContentObserver;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,10 +20,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.gdmec.s07150815.myguard.R;
-import edu.gdmec.s07150815.myguard.m9advancedtools.entity.AppInfo;
-import edu.gdmec.s07150815.myguard.m9advancedtools.utils.AppInfoParser;
 import edu.gdmec.s07150815.myguard.m9advancedtools.adapter.AppLockAdapter;
 import edu.gdmec.s07150815.myguard.m9advancedtools.db.dao.AppLockDao;
+import edu.gdmec.s07150815.myguard.m9advancedtools.entity.AppInfo;
+import edu.gdmec.s07150815.myguard.m9advancedtools.utils.AppInfoParser;
 
 /**
  * Created by ys on 2016/12/22.
@@ -40,7 +38,7 @@ public class AppUnLockFragment extends Fragment{
     private Uri uri=Uri.parse("content://com.itcast.mobilesafe.applock");
     private List<AppInfo>appInfos;
     private Handler mhandler=new Handler(){
-        public void handleMessage(android.os.Message msg){
+        public void handleMessage(Message msg){
             switch (msg.what){
                 case 100:
                     unlockApps.clear();
@@ -57,7 +55,6 @@ public class AppUnLockFragment extends Fragment{
         }
     };
 
-    @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_appunlock,null);

@@ -1,4 +1,4 @@
-package edu.gdmec.s07150815.myguard.m9advancedtools.survice;
+package edu.gdmec.s07150815.myguard.m9advancedtools.service;
 
 import android.app.ActivityManager;
 import android.app.Service;
@@ -51,11 +51,11 @@ public class AppLockService extends Service {
         intent =new Intent(AppLockService.this, EnterPswActivity.class);
         //获取ActivityManager对象
         am= (ActivityManager) getSystemService(ACTIVITY_SERVICE);
-        starApplockService();
+        startApplockService();
         super.onCreate();
     }
     //开启监控程序服务
-    private void starApplockService() {
+    private void startApplockService() {
         new Thread(){
             public void run(){
                 flag=true;
@@ -97,7 +97,7 @@ public class AppLockService extends Service {
             }else if (Intent.ACTION_SCREEN_ON.equals(intent.getAction())){
                 //开启监控程序
                 if (flag==false){
-                    starApplockService();
+                    startApplockService();
                 }
             }
         }

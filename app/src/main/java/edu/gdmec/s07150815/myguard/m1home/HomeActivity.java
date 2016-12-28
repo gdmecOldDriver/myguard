@@ -15,6 +15,7 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import edu.gdmec.s07150815.myguard.R;
+import edu.gdmec.s07150815.myguard.m10settings.SettingsActivity;
 import edu.gdmec.s07150815.myguard.m1home.adapter.HomeAdapter;
 import edu.gdmec.s07150815.myguard.m2theftguard.LostFindActivity;
 import edu.gdmec.s07150815.myguard.m2theftguard.dialog.InterPasswordDialog;
@@ -27,6 +28,7 @@ import edu.gdmec.s07150815.myguard.m5virusscan.VirusScanActivity;
 import edu.gdmec.s07150815.myguard.m6cleancache.CacheClearListActivity;
 import edu.gdmec.s07150815.myguard.m7processmanager.ProcessManagerActivity;
 import edu.gdmec.s07150815.myguard.m8trafficMonitor.TrafficMonitoringActivity;
+import edu.gdmec.s07150815.myguard.m9advancedtools.AdvancedToolsActivity;
 
 public class HomeActivity extends AppCompatActivity {
     //声明GirdView 该控件类似listview
@@ -85,11 +87,11 @@ public class HomeActivity extends AppCompatActivity {
                         startActivity(TrafficMonitoringActivity.class);
                         break;
                     case 7 ://高级工具
-//                        startActivity(AdvancedToolsActivity.class);
-//                        break;
+                        startActivity(AdvancedToolsActivity.class);
+                        break;
                     case 8 ://设置中心
-//                        startActivity(SettingsActivity.class);
-//                        break;
+                        startActivity(SettingsActivity.class);
+                        break;
                 }
             }
         });
