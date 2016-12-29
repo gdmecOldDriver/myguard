@@ -22,14 +22,14 @@
         <TextView
             android:id="@+id/tv_appname"
             style="@style/textview16sp"
-           android:layout_toRightOf="@+id/imav_appicon"
+           android:layout_toRightOf="@+id/imgv_appicon"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
             />
         <TextView
             android:id="@+id/tv_appisroom"
             style="@style/textview14sp"
-            android:layout_toRightOf="@+id/imav_appicon"
+            android:layout_toRightOf="@+id/imgv_appicon"
             android:layout_marginTop="3dp"
             android:layout_alignLeft="@+id/tv_appname"
             android:layout_below="@+id/tv_appname"
