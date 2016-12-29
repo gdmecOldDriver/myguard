@@ -10,10 +10,8 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import edu.gdmec.s07150815.myguard.R;
 import edu.gdmec.s07150815.myguard.m9advancedtools.fragment.AppLockFragment;
 import edu.gdmec.s07150815.myguard.m9advancedtools.fragment.AppUnLockFragment;
@@ -21,7 +19,7 @@ import edu.gdmec.s07150815.myguard.m9advancedtools.fragment.AppUnLockFragment;
 /**
  * Created by 马达 on 2016/12/27.
  */
-
+//
 public class AppLockActivity extends FragmentActivity implements View.OnClickListener{
     private ViewPager mAppViewPager;
     List<Fragment> mFragments=new ArrayList<Fragment>();
@@ -90,7 +88,6 @@ public class AppLockActivity extends FragmentActivity implements View.OnClickLis
         mFragments.add(unLock);
         mFragments.add(lock);
         mAppViewPager.setAdapter(new MyAdapter(getSupportFragmentManager()));
-
     }
 
     @Override
@@ -114,8 +111,8 @@ public class AppLockActivity extends FragmentActivity implements View.OnClickLis
         }
 
         @Override
-        public Fragment getItem(int position) {
-            return null;
+        public android.support.v4.app.Fragment getItem(int arg0) {
+            return mFragments.get(arg0);
         }
 
 

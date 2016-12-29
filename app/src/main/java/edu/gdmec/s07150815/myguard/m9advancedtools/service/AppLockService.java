@@ -104,7 +104,6 @@ public class AppLockService extends Service {
     }
     //内容观察者
     class MyObserver extends ContentObserver {
-
         public MyObserver(Handler handler) {
             super(handler);
         }

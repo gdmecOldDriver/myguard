@@ -1,14 +1,12 @@
 package edu.gdmec.s07150815.myguard.m9advancedtools.fragment;
 
-import android.annotation.TargetApi;
+
 import android.support.v4.app.Fragment;
 import android.database.ContentObserver;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +28,7 @@ import edu.gdmec.s07150815.myguard.m9advancedtools.db.dao.AppLockDao;
 /**
  * Created by ys on 2016/12/22.
  */
-@TargetApi(Build.VERSION_CODES.HONEYCOMB)
+
 public class AppLockFragment extends Fragment{
     private TextView mLockTV;
     private ListView mLockLV;
@@ -39,16 +37,27 @@ public class AppLockFragment extends Fragment{
     private AppLockAdapter adapter;
     private Uri uri=Uri.parse("content://com.itcast.mobilesafe.applock");
     private Handler mHandle=new Handler() {
-        @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-        public void handleMessage(Message msg) {
+        public void handleMessage(android.os.Message msg) {
+            for(int i = 0;i<50;i++){
+                    System.out.println("hm方法进入");
+            }
             switch (msg.what) {
                 case 10:
+                    for(int i =0;i<50;i++){
+                        System.out.println("s语句进入");
+                    }
                     mLockApps.clear();
                     mLockApps.addAll((List<AppInfo>) msg.obj);
                     if (adapter == null) {
+                        for(int i =0;i<50;i++){
+                            System.out.println("空！！！！");
+                        }
                         adapter = new AppLockAdapter(mLockApps, getActivity());
                         mLockLV.setAdapter(adapter);
                     } else {
+                        for(int i =0;i<50;i++){
+                            System.out.println("非空！！！！");
+                        }
                         adapter.notifyDataSetChanged();
                     }
                     mLockTV.setText("加锁应用" + mLockApps.size() + "个");
@@ -58,14 +67,14 @@ public class AppLockFragment extends Fragment{
     };
     private List<AppInfo> appInfos;
 
-    @Nullable
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_applock,null);
         mLockTV= (TextView) view.findViewById(R.id.tv_lock);
         mLockLV = (ListView) view.findViewById(R.id.lv_lock);
-
         return view;
+
     }
 
     @Override
@@ -85,7 +94,6 @@ public class AppLockFragment extends Fragment{
 
     private void initListener() {
         mLockLV.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-
             @Override
             public void onItemClick(AdapterView<?> parent, View view,final int position, long id) {
                 //插播一个动画效果
