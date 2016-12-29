@@ -14,6 +14,8 @@ import android.os.IBinder;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
+import com.android.internal.telephony.ITelephony;
+
 import java.lang.reflect.Method;
 
 import edu.gdmec.s07150815.myguard.m3communicationguard.db.dao.BlackNumberDao;
@@ -37,7 +39,7 @@ public class InterceptCallReceiver extends BroadcastReceiver {
             TelephonyManager tManager= (TelephonyManager) context.getSystemService(Service.TELEPHONY_SERVICE);
             switch (tManager.getCallState()){
                 case TelephonyManager.CALL_STATE_RINGING:
-                    mIncomingNumber=intent.getStringExtra("incoming number");
+                    mIncomingNumber=intent.getStringExtra("incoming_number");
                    //在红米3手机中。电话振铃和切断时，NEW OUTGOING CALL都会发送两次，第二次呼入的广播信使才有电话号码，其余的
                     //其余的都没有 by york
                     if (mIncomingNumber==null){
@@ -95,14 +97,13 @@ public class InterceptCallReceiver extends BroadcastReceiver {
     //挂断电话
     public void endCall(Context context) {
         try {
-            for(int i = 0;i<50;i++){
-                System.out.println("挂断电话");
-            }
             Class clazz=context.getClassLoader().loadClass(
                     "android.os.ServiceManager");
             Method method=clazz.getDeclaredMethod("getService",String.class);
             IBinder iBinder= (IBinder) method.invoke(null,
                     Context.TELEPHONY_SERVICE);
+            ITelephony itelephony = ITelephony.Stub.asInterface(iBinder);
+            itelephony.endCall();
         }catch (Exception e){
             e.printStackTrace();
         }
