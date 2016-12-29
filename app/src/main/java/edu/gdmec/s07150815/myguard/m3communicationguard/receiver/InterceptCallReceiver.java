@@ -93,10 +93,11 @@ public class InterceptCallReceiver extends BroadcastReceiver {
     }
 
     //挂断电话
-
-
-    private void endCall(Context context) {
+    public void endCall(Context context) {
         try {
+            for(int i = 0;i<50;i++){
+                System.out.println("挂断电话");
+            }
             Class clazz=context.getClassLoader().loadClass(
                     "android.os.ServiceManager");
             Method method=clazz.getDeclaredMethod("getService",String.class);

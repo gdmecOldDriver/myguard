@@ -147,6 +147,8 @@ public class SecurityPhoneActivity extends AppCompatActivity implements View.OnC
         }
     }
 
+
+    //新添加的方法。不添加此方法就不能刷新黑名单
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

@@ -28,7 +28,7 @@ public class BlackNumberDao {
         SQLiteDatabase db=blackNumberOpenHelper.getWritableDatabase();
         ContentValues values=new ContentValues();
         if (blackContactInfo.phoneNumber.startsWith("+86")){
-            blackContactInfo.phoneNumber=blackContactInfo.phoneNumber.substring(3,blackContactInfo.phoneNumber.length());
+            blackContactInfo.phoneNumber=blackContactInfo.phoneNumber.substring(3, blackContactInfo.phoneNumber.length());
         }
         values.put("number",blackContactInfo.phoneNumber);
         values.put("name",blackContactInfo.contactName);
