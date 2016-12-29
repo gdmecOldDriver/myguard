@@ -60,7 +60,7 @@ public class OperatorSetActivity extends AppCompatActivity implements View.OnCli
                 edit.putInt("operator",mSelectSP.getSelectedItemPosition()+1);
                 edit.putBoolean("isset_operator",true);
                 edit.commit();
-                startActivity(new Intent(this, TrafficMonitoringActivity.class));
+                startActivity(new Intent(this, edu.gdmec.s07150815.myguard.m8trafficMonitor.TrafficMonitoringActivity.class));
                 finish();
                 break;
         }
