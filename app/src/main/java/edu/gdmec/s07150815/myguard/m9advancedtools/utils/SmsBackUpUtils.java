@@ -52,7 +52,8 @@ public class SmsBackUpUtils {
             //写根节点
             ContentResolver resolver=context.getContentResolver();
             Uri uri=Uri.parse("content://sms/");
-            Cursor cursor=resolver.query(uri,new String[]{"address","body","type","date"},null,null,null);
+           /* Cursor cursor=resolver.query(uri,new String[]{"address","body","type","date"},null,null,null);*/
+            Cursor cursor = resolver.query(uri, new String[] {"address","body","type","date"},null,null,null);
             //得到总的条目的个数
             int size=cursor.getCount();
             //设置进度的总大小
