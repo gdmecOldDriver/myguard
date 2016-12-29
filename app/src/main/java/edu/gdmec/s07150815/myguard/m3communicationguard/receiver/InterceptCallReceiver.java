@@ -62,7 +62,7 @@ public class InterceptCallReceiver extends BroadcastReceiver {
         private String incomingNumber;
         private Context context;
 
-        public CallLogObserver(Handler handler, String mIncomingNumber, Context context) {
+        public CallLogObserver(Handler handler, String incomingNumber, Context context) {
 
             super(handler);
             this.incomingNumber=incomingNumber;
