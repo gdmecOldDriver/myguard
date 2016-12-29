@@ -47,7 +47,8 @@ public class MyCircleProgress extends Button {
         paint = new Paint();
         this.context = context;
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.MyCircleProgress);
-        progress = typedArray.getInteger(R.styleable.MyCircleProgress_progress,100);
+        progress = typedArray.getInteger(R.styleable.MyCircleProgress_progress,0);
+        max = typedArray.getInteger(R.styleable.MyCircleProgress_max,100);
         mCircleColor = typedArray.getColor(R.styleable.MyCircleProgress_circleColor, Color.RED);
         mProgressColor = typedArray.getColor(R.styleable.MyCircleProgress_progressColor,Color.WHITE);
         roundWidth = DensityUtil.dip2px(context,5);
@@ -77,7 +78,7 @@ public class MyCircleProgress extends Button {
         RectF oval = new RectF(centerX - radius,centerY - radius,centerX+radius,centerY + radius);
         paint.setStyle(Paint.Style.STROKE);
         canvas.setDrawFilter(new PaintFlagsDrawFilter(0,Paint.ANTI_ALIAS_FLAG|Paint.FILTER_BITMAP_FLAG));
-        canvas.drawArc(oval,0,360 * progress/max,false,paint);
+        canvas.drawArc(oval , 0 , 360*progress / max ,false ,paint);
         //写进度文字
         paint.setStrokeWidth(0);
         paint.setColor(mProgressColor);

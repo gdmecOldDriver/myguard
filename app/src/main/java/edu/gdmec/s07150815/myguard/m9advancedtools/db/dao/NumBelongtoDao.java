@@ -22,12 +22,11 @@ public class NumBelongtoDao {
         //17x
         //长度是11位
         //^1[134578]\d{9}$
-        SQLiteDatabase db = SQLiteDatabase.openDatabase("/data/data/cn.edu.s07150815.myguard/files/address.db",null
+        SQLiteDatabase db = SQLiteDatabase.openDatabase("/data/data/edu.gdmec.s07150815.myguard/files/address.db",null
                 ,SQLiteDatabase.OPEN_READONLY);
         if(phonenumber.matches("^1[34578]\\d{9}$")) {
             //手机号码的查询
-            Cursor cursor = db.rawQuery("select location from data2 where id=(select outkey from datal where id=?)",
-                    new String[]{phonenumber.substring(0, 7)});
+            Cursor cursor = db.rawQuery("select location from data2 where id = (select outkey from data1 where id = ?)",new String[]{phonenumber.substring(0,7)});
             if (cursor.moveToNext()) {
                 location = cursor.getString(0);
 
@@ -52,9 +51,7 @@ public class NumBelongtoDao {
                     case 5:
                         location = "客服电话";
                         break;
-                    case 6:
-                        location = "本地电话";
-                        break;
+
                     case 7:
                         location = "本地电话";
                         break;
