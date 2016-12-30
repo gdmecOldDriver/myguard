@@ -80,6 +80,10 @@ public class EnterPswActivity extends AppCompatActivity implements View.OnClickL
                             intent.setAction("cn.itcast.mobilesafe.applock");
                             intent.putExtra("packagename",packagename);
                             finish();
+                        }else{
+                            startAnim();
+                            Toast.makeText(this,"密码不正确",Toast.LENGTH_SHORT).show();
+                            return;
                         }
                     }
                 }

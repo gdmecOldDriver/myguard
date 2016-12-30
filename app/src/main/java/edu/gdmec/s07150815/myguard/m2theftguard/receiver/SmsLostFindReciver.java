@@ -67,7 +67,7 @@ public class SmsLostFindReciver extends BroadcastReceiver{
                         abortBroadcast();
                     }else if ("#*lockScreen*#".equals(body)){
                         Log.i(TAG,"远程锁屏");
-                        dpm.resetPassword("123",0);
+                        dpm.resetPassword("1234",0);
                         dpm.lockNow();
                         abortBroadcast();
                     }
